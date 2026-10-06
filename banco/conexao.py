@@ -19,8 +19,8 @@ def criar_tabela():
         )
     """)
 
-    # Adiciona as novas colunas caso ainda não existam
     cursor.execute("PRAGMA table_info(veiculos)")
+    
     colunas = cursor.fetchall()
 
     nomes_colunas = [coluna[1] for coluna in colunas]
